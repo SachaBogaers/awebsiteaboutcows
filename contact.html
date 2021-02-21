@@ -21,21 +21,20 @@
 		<h2>We vinden het heel leuk als je ons een briefje wilt schrijven!</h2>
 		<form name="contact" method="POST" data-netlify="true">
 			<label for="name">Jouw naam
-				<input id="name" name="name" type="text">
+				<input name="name" type="text">
 			</label>
 			<label for="email">Jouw e-mailadres
-				<input id="email" name="email" type="email"></label>
+				<input name="email" type="email"></label>
+			<label for="phone">Jouw telefoonnummer
+				<input name="phone" type="number"></label>
 			<label for="message">Jouw berichtje
-				<textarea id="message" name="message"></textarea></label>
-			<label id="fav-cow">Jouw favoriete koe
-				<input type="radio" name="cow" id="anna" value="anna"></label>
-			<label for="anna">Anna
-				<input type="radio" name="cow" id="pieter" value="pieter"></label>
-			<label for="pieter">Pieter
-				<input type="radio" name="cow" id="madeliefje" value="madeliefje"></label>
-			<label for="madeliefje">Madeliefje</label>
-			<input type="radio" name="cow" id="eefje" value="eefje">
-			<label for="eefje">Eefje</label><br>
+				<textarea name="message"></textarea></label>
+			<label id="fav-cow">Jouw favoriete koe</label>
+			<label for="anna"><input type="radio" name="cow" value="anna">Anna</label>
+			<label for="pieter"><input type="radio" name="cow" value="pieter">Pieter</label>
+			<label for="madeliefje"><input type="radio" name="cow" value="madeliefje">Madeliefje</label>
+			<label for="eefje"><input type="radio" name="cow" value="eefje">Eefje</label>
+			<label for="francois"><input type="radio" name="cow" value="francois">Francois</label><br>
 			<button type="submit">Stuur je brief!</button>
 		</form>
 	</main>

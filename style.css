@@ -53,7 +53,7 @@ p {
 	margin: 0 auto;
 }
 
-form #name, form #email, form #message {
+input[type=text], input[type=email], textarea{
 	display: block;
 }
 
