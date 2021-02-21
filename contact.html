@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> De familie Koe - Schrijf ons! </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>De familie Koe</h1>
+		<nav>
+			<ul class="navigation-items">
+				<li><a href="index.html">Het weiland</a></li>
+				<li><a href="about.html">De schuur</a></li>
+				<li><a href="contact.html">Schrijf ons!</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h2>We vinden het heel leuk als je ons een briefje wilt schrijven!</h2>
+		<form name="contact" method="POST" data-netlify="true">
+			<label for="name">Jouw naam
+				<input id="name" name="name" type="text">
+			</label>
+			<label for="email">Jouw e-mailadres
+				<input id="email" name="email" type="email"></label>
+			<label for="message">Jouw berichtje
+				<input id="message" name="message" type="textarea"></label>
+			<label id="fav-cow">Jouw favoriete koe</label>
+			<input type="radio" name="cow" id="anna" value="anna">
+			<label for="anna">Anna</label>
+			<input type="radio" name="cow" id="pieter" value="pieter">
+			<label for="pieter">Pieter</label>
+			<input type="radio" name="cow" id="madeliefje" value="madeliefje">
+			<label for="madeliefje">Madeliefje</label>
+			<input type="radio" name="cow" id="eefje" value="eefje">
+			<label for="eefje">Eefje</label><br>
+			<button type="submit" value="Submit">Stuur je brief!</button>
+		</form>
+	</main>
+	<footer>Copyright Sacha 2021</footer>
+</body>
+
+</html>

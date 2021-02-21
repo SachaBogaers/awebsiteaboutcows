@@ -53,6 +53,19 @@ p {
 	margin: 0 auto;
 }
 
+form #name, form #email, form #message {
+	display: block;
+}
+
+form #message {
+	width: 400px;
+	height: 200px;
+}
+
+#fav-cow {
+	display: block;
+}
+
 
 footer {
 	font-size: 14px;
