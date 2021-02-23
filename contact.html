@@ -4,12 +4,14 @@
 <head>
 	<title> De familie Koe - Schrijf ons! </title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
 	<header>
-		<h1>De familie Koe</h1>
 		<nav>
+			<h1>De familie Koe</h1>
 			<ul class="navigation-items">
 				<li><a href="index.html">Het weiland</a></li>
 				<li><a href="about.html">De schuur</a></li>
@@ -17,60 +19,45 @@
 			</ul>
 		</nav>
 	</header>
-	<main>
+	<main class="page-content">
 		<h2>We vinden het heel leuk als je ons een briefje wilt schrijven!</h2>
-		<form name="contact" method="POST" data-netlify="true">
-			<div>
-				<label for="name">Jouw naam</label>
-				<input name="name" type="text" />
-			</div>
-			<div>
-				<label for="email">Jouw e-mailadres</label>
-				<input name="email" type="email" />
-			</div>
-			<div>
-				<label for="phone">Jouw telefoonnummer</label>
-				<input name="phone" type="tel" />
-			</div>
-			<div>
-				<label for="age">Jouw leeftijd</label>
-				<input name="age" type="number" min="1" max="150" />
-			</div>
-			<div>
-				Jouw gender
-				<label for="male"><input type="radio" id="male" name="gender" value="male">Man</label><br>
-				<label for="female"><input type="radio" id="female" name="gender" value="female">Vrouw</label>
-			</div>
-			<div>
-				<label for="fav-food">Wat is je favoriete eten?</label>
-				<input type="checkbox" id="food1" name="food1" value="Frans">
-				<label for="food1">Frans</label>
-				<input type="checkbox" id="food2" name="food2" value="Italiaans">
-				<label for="food2">Italiaans</label>
-				<input type="checkbox" id="food3" name="food3" value="Spaans">
-				<label for="food3">Spaans</label>
-				<input type="checkbox" id="food4" name="food4" value="Arabisch">
-				<label for="food4"></label>Arabisch</label>
-			</div>
-			<div>
-				<label for="message">Jouw biografie
-					<textarea name="message"></textarea></label>
-			</div>
-			<div><label id="fav-cow">Jouw favoriete koe</label>
-				<label for="anna"><input type="radio" name="cow" value="anna">Anna</label>
-				<label for="pieter"><input type="radio" name="cow" value="pieter">Pieter</label>
-				<label for="madeliefje"><input type="radio" name="cow" value="madeliefje">Madeliefje</label>
-				<label for="eefje"><input type="radio" name="cow" value="eefje">Eefje</label>
-				<label for="francois"><input type="radio" name="cow" value="francois">Francois</label>
-			</div>
-			<div>
-				<label for="upload">Upload je favoriete recept</label><input type="file">
-			</div>
-			<div>
-				<label>Je recepten website</label><input type="url">
-			</div>
-			<button type="submit">Verstuur!</button> <button type="reset">Reset formulier</button>
-		</form>
+		<div class="contact-form">
+			<form name="contact" method="POST" data-netlify="true">
+				<div>
+					<label for="name">Jouw naam</label><br>
+					<input name="name" type="text" />
+				</div>
+				<div>
+					<label for="email">Jouw e-mailadres</label><br>
+					<input name="email" type="email" />
+				</div>
+				<div>
+					<label for="phone">Jouw telefoonnummer</label><br>
+					<input name="phone" type="tel" />
+				</div>
+				<div>
+					<label for="age">Jouw leeftijd</label><br>
+					<input name="age" type="number" min="1" max="150" />
+				</div>
+
+				<div id="fav-cow"><label>Jouw favoriete koe</label>
+					<label for="anna"><input type="radio" name="cow" value="anna">Anna</label>
+					<label for="pieter"><input type="radio" name="cow" value="pieter">Pieter</label>
+					<label for="madeliefje"><input type="radio" name="cow" value="madeliefje">Madeliefje</label>
+					<label for="eefje"><input type="radio" name="cow" value="eefje">Eefje</label><br>
+					<label for="francois"><input type="radio" name="cow" value="francois">Francois</label>
+				</div>
+				<div>
+					<label for="message">Jouw briefje</label><br>
+					<textarea name="message"></textarea>
+				</div>
+				<div>
+					<label for="upload">Liever een brief op papier schrijven? Maak er een foto van en upload hem
+						hier!</label><input type="file">
+				</div>
+				<button type="submit">Verstuur!</button> <button type="reset">Reset formulier</button>
+			</form>
+		</div>
 	</main>
 	<footer>Copyright Sacha 2021</footer>
 </body>

@@ -1,12 +1,4 @@
-* {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
+/*General styles */
 
 body, html {
 	color: #111;
@@ -19,6 +11,7 @@ h1 {
 	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	color: midnightblue;
 	font-size: 25px;
+	font-family: 'RocknRoll One', sans-serif;
 }
 
 h2 {
@@ -29,7 +22,14 @@ h2 {
 
 p {
 	padding: 5px;
+	text-align: center;
 }
+
+ol {
+	text-align: center;
+	list-style-position: inside;
+}
+
 
 a {
 	color: midnightblue;
@@ -47,14 +47,14 @@ a:hover {
 
 .page {
 	display: grid;
-	grid-template-columns: 20% 1fr 1fr;
-  	grid-template-rows: 100px 0.5fr auto 100px;
-  	/* We now have 3x3 cells, here is where each section is placed */
+	grid-template-columns: 1fr;
+  	grid-template-rows: 100px 0.5fr auto auto 100px;
   	grid-template-areas:
-	"nav nav nav"
-    "header header header"  /* a header stretching in the top row */
-    "main main main"  /* a left sidebar, and our app content */
-    "footer footer footer"; /* and a footer along the bottom row  */
+	"nav"
+    "header" 
+    "main"
+	"aside"
+    "footer";
 }
 
 
@@ -63,18 +63,23 @@ nav {
 	background-color: #11B4D8;
 }
 
-nav h1 {
-	text-align: left;
-}
-
 
 header {
 	grid-area: header;
 }
 
-main {
+.page-content {
 	grid-area: main;
-	padding: 50px 50px 0 50px;
+	padding: 50px 50px 50px 50px;
+	background-color: #68D9F3;
+}
+
+aside {
+	margin: 10px;
+	grid-area: aside;
+	background-color: #68D9F3;
+	text-align: left;
+	padding: 25px;
 }
 
 footer {
@@ -93,6 +98,7 @@ footer {
 	margin: 300px auto 0px auto;
 	background-color: rgba(118, 159, 182, 0.8);
 	padding: 10px;
+	text-align: center;
 }
 
 .barn-button {
@@ -108,11 +114,17 @@ footer {
 
 
 
+/* Nav */
 
+nav h1 {
+	text-align: left;
+	display: inline;
+}
 
 .navigation-items {
 	display: flex;
 	justify-content: flex-end;
+
 }
 
 .navigation-items li {
@@ -127,11 +139,11 @@ footer {
 }
 
 
-/* Homepage */
-
-
-
-
+/* About page */
+.about-hero {
+	background: url('barn.jpg') center;
+	background-size: cover;
+}
 
 .about-text {
 	text-align: center;
@@ -142,8 +154,18 @@ footer {
 	margin: 0 auto;
 }
 
-input, textarea{
+.video {
+	margin: 0 auto;
 	display: block;
+}
+
+
+/* Contact page */
+input, textarea{
+	display: inline-block;
+	background-color: lightgrey;
+	padding: 5px;
+	margin: 5px;
 }
 
 form #message {
@@ -153,9 +175,22 @@ form #message {
 
 #fav-cow {
 	display: block;
+	margin-bottom: 10px;
+}
+
+.contact-form {
+	margin: 0 auto;
+	width: 50%;
+	display: block;
+	text-align: center;
+}
+
+button[type="submit"] {
+	margin: 10px;
 }
 
 
+/*Footer */
 footer {
 	font-size: 14px;
 	margin: 10px 0px;
@@ -164,13 +199,24 @@ footer {
 }
 
 
-/** Media queries
-*/
-
-  @media (min-width: 1024px) {
-	p, li {
-		font-size: 0.8em;
-		line-height: 20px;
+ @media (min-width: 1024px) {
+	.page {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		  grid-template-rows: 100px 0.5fr auto 100px;
+		  grid-template-areas:
+		"nav nav"
+		"header header" 
+		"main aside" 
+		"footer footer";
 	}
+	.page-content {
+		margin: 10px;
+		padding: 100px 150px 25px 150px;
+	}
+
+
+
+
   }
 
