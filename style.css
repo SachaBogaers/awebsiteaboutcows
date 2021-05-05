@@ -10,7 +10,7 @@ h1 {
 	text-align: center;
 	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	color: midnightblue;
-	font-size: 25px;
+	font-size: 15px;
 	font-family: 'RocknRoll One', sans-serif;
 }
 
@@ -63,6 +63,7 @@ nav {
 	background-color: #11B4D8;
 	display: flex;
 	justify-content: space-between;
+	padding: 10px;
 }
 
 nav ul {
@@ -75,7 +76,7 @@ header {
 
 .page-content {
 	grid-area: main;
-	padding: 50px 50px 50px 50px;
+	padding: 25px;
 	background-color: #68D9F3;
 }
 
@@ -100,7 +101,7 @@ footer {
 }
 
 .hero-text {
-	margin: 300px auto 0px auto;
+	margin: 400px auto 0px auto;
 	background-color: rgba(118, 159, 182, 0.8);
 	padding: 10px;
 	text-align: center;
@@ -108,7 +109,7 @@ footer {
 
 .barn-button {
 	background-color: #188FA7;
-	width: 100px;
+	width: 200px;
 	color: white;
 	font-weight: bold;
 	text-align: center;
@@ -230,6 +231,9 @@ footer {
 		padding: 100px 150px 25px 150px;
 	}
 
+	nav h1 {
+		font-size: 25px
+	}
 
 
 
