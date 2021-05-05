@@ -61,8 +61,13 @@ a:hover {
 nav {
 	grid-area: nav;
 	background-color: #11B4D8;
+	display: flex;
+	justify-content: space-between;
 }
 
+nav ul {
+	padding-top: 5px;
+}
 
 header {
 	grid-area: header;
